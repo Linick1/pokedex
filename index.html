@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/main.js" type="module" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="remove-hidden-overflow">
     <main>
         <form action="">
-            <input type="text" name="" id="idPokemon">
-            <button id="buscarData">dada</button>
+            <h1>Pokémon</h1>
+            <div class="align-button-input">
+                <input type="text" name="" id="idPokemon">
+                <button id="searchData">CAPTURAR</button>
+            </div>
 
-            <input type="text" id="id">
-            <input type="text" id="name">
+            <div id="pokemon-group-card" class="hidden">
 
+            </div>
+            <div id="pokemon-solo-card" class="hidden">
+                <div class="pokemon-solo-card-id">
+                    <span>ID:</span>
+                    <p id="id"></p>
+                </div>
+
+                <div class="pokemon-solo-card-name">
+                    <span>Nome:</span>
+                    <p id="name"></p>
+                </div>
+
+                <div class="pokemon-solo-card-weight">
+                    <span>Peso:</span>
+                    <p id="weight"></p>
+                </div>
+
+                <div class="pokemon-solo-card-height">
+                    <span>Altura:</span>
+                    <p id="height"></p>
+                </div>
+                <img src="" id="poke-icon">
+            </div>
         </form>
     </main>
 </body>

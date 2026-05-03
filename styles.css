@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-size: 1.6rem;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffcd0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #038803;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+    font-size: var(--font-size);
+    background-image: url(images/44.png);
+    height: 100vh;
+
+    background-attachment: fixed;
+}
+
+.remove-hidden-overflow {
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Luckiest Guy", sans-serif;
+    margin: .2rem;
+}
+
+h1 {
+    font-size: 15rem;
+    color: #ffcd0c;
+    margin-top: 7rem;
+    text-shadow: -4px -4px 0 #4261a9, 4px -4px 0 #4261a9, -4px 4px 0 #4261a9, 4px 4px 0 #4261a9;
+    letter-spacing: 2px;
+
+}
+
+#idPokemon {
+    width: 60rem;
+    height: 5rem;
+    font-family: "Luckiest Guy", sans-serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: #ebc737;
+    text-shadow: 2px 2px 0 #4261a9;
+    background: rgb(210, 221, 210);
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+#searchData {
+    padding: 2px;
+    height: 5rem;
+    font-family: "Luckiest Guy", sans-serif;
+    color: #ebc737;
+    text-shadow: 2px 2px 0 #4261a9;
+    background: rgb(90, 158, 90);
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+}
+#searchData:hover {
+    background: rgb(41, 63, 41);
+}
+.align-button-input {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.pokemon-group {
+    background-color: #0202023b;
+    display: flex;
+    margin-top: 2rem;
+    border-radius: 5px;
+    gap: 2rem;
+    padding: 4px;
+}
+
+#pokemon-group-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    background: rgba(248, 204, 7, 0.404);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    gap: 11rem;
+    padding: 3rem;
+
+    font-size: 1.4rem;
+    color: rgb(31, 30, 30);
+    text-align: center;
+    font-family: 'Courier New', Courier;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+#pokemon-solo-card {
+    background: rgba(248, 204, 7, 0.404);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 2rem;
+    margin-top: -6.3rem;
+    font-size: 1.4rem;
+    color: rgb(31, 30, 30);
+    text-align: center;
+    font-family: 'Courier New', Courier;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70rem;
+}
+
+@media (max-width: 731px) {
+    h1 {
+        font-size: 12rem;
+    }
+
+    #idPokemon {
+         width: 46rem;
+    }
+
+    #pokemon-group-card {
+         grid-template-columns: repeat(2);
+         width: 57rem;
+    }
+}
+
+@media (max-width: 610px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+     #idPokemon {
+         width: 28rem;
+    }
+
+      #pokemon-group-card {
+         grid-template-columns: repeat(2, 1fr);
+         width: 38rem;
+    }
+}
+
+@media (max-width: 410px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+     #idPokemon {
+         width: 15rem;
+    }
+
+      #pokemon-group-card {
+         grid-template-columns: repeat(1, 1fr);
+         width: 25rem;
+    }
+}
+
+@media (max-width: 280px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+     #idPokemon {
+         width: 6rem;
+    }
+
+   #searchData {
+    width: 7rem;
+    height: 50px;
+    font-size: 10px;
+   }
+
+   #idPokemon {
+    width: 13rem;
+    font-size: 10px;
+   }
+
+   #pokemon-group-card {
+    grid-template-columns: repeat(1, 1fr);
+    width: 20rem;
+   }
+}
+
+.pokemon-solo-card-id, .pokemon-solo-card-name,  .pokemon-solo-card-weight, .pokemon-solo-card-height {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
